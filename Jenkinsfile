@@ -11,7 +11,7 @@ pipeline {
         sh "printenv"
         sh "ls -alh /usr/share/maven"
         sh "ls -alh /usr/share/maven-repo"
-        sh "mkdir -p /.m2/repository"
+        sh "whoami"
       }
     }
     
