@@ -3,6 +3,7 @@ pipeline {
     docker {
       image "maven:3.9-eclipse-temurin-17" 
       args '-e JAVA_HOME=/opt/java/openjdk/ -u root'
+      reuseNode true
     }
   }
 
