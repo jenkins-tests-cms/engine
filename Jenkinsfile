@@ -8,9 +8,8 @@ pipeline {
         sh "mvn -version"
         sh "java -version"
         sh "ls;pwd"
-        sh "echo $WORKSPACE"
-        sh "echo $HOME"
         sh "printenv"
+        sh "mkdir -p /.m2/repository"
       }
     }
     
