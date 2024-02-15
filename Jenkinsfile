@@ -10,7 +10,7 @@ pipeline {
         sh "ls;pwd"
         sh "echo $WORKSPACE"
         sh "echo $HOME"
-        sh "echo printenv"
+        sh "printenv"
       }
     }
     
