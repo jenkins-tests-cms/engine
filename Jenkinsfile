@@ -10,7 +10,6 @@ pipeline {
         sh "ls -alh;pwd"
         sh "printenv"
         sh "ls -alh /usr/share/maven"
-        sh "whoami"
         sh "mvn help:evaluate -Dexpression=settings.localRepository"
       }
     }
