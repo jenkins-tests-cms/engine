@@ -20,6 +20,7 @@ pipeline {
         sh "wget https://raw.githubusercontent.com/craftercms/craftercms/support/4.1.x/pom-spring-boot.xml"
         sh "mvn -DskipTests -f pom-craftercms.xml clean install"
         sh "mvn -DskipTests -f pom-spring-boot.xml clean install"
+        sh "mvn help:evaluate -Dexpression=project.repositories"
       }
     }
     
