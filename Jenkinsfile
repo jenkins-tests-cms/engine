@@ -16,6 +16,10 @@ pipeline {
         sh "printenv"
         sh "ls -alh /usr/share/maven"
         sh "mvn help:evaluate -Dexpression=settings.localRepository"
+        sh "wget https://raw.githubusercontent.com/craftercms/craftercms/support/4.1.x/pom.xml -O pom-craftercms.xml"
+        sh "wget https://raw.githubusercontent.com/craftercms/craftercms/support/4.1.x/pom-spring-boot.xml"
+        sh "mvn -DskipTests -f pom-craftercms.xml clean install"
+        sh "mvn -DskipTests -f pom-spring-boot.xml clean install"
       }
     }
     
