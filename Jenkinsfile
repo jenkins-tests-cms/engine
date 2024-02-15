@@ -7,8 +7,10 @@ pipeline {
       steps {
         sh "mvn -version"
         sh "java -version"
-        sh "ls;pwd"
+        sh "ls -alh;pwd"
         sh "printenv"
+        sh "ls -alh /usr/share/maven"
+        sh "ls -alh /usr/share/maven-repo"
         sh "mkdir -p /.m2/repository"
       }
     }
