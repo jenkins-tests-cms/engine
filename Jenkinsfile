@@ -12,6 +12,7 @@ pipeline {
       steps {
         sh "mvn -version"
         sh "java -version"
+        sh "javac -version"
         sh "ls -alh;pwd"
         sh "printenv"
         sh "ls -alh /usr/share/maven"
