@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker "maven:3.9-eclipse-temurin-17" }
+  agent { docker "maven:3.9-eclipse-temurin-21" }
 
   stages {
     
