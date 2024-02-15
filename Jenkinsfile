@@ -7,8 +7,8 @@ pipeline {
       steps {
         sh "mvn -version"
         sh "java -version"
-        sh "mkdir -p $HOME/.m2"
-        sh "ls"
+        sh "ls;pwd"
+        sh "echo $WORKSPACE"
       }
     }
     
