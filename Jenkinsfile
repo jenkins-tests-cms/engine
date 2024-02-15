@@ -2,7 +2,7 @@ pipeline {
   agent { 
     docker {
       image "maven:3.9-eclipse-temurin-17" 
-      args '-u root'
+      args '-e JAVA_HOME=/opt/java/openjdk/ -u root'
     }
   }
 
