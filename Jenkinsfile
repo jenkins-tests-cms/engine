@@ -1,5 +1,5 @@
 DOCKER_MAVEN_IMAGE = 'maven:3.9-eclipse-temurin-17'
-DOCKER_MAVEN_ARGS = '-v $HOME/.m2/builds/$BRANCH_NAME:/root/.m2 -u 113:120'
+DOCKER_MAVEN_ARGS = '-v /home/vagrant/.m2/builds/$BRANCH_NAME:/root/.m2 -u 113:120'
 
 pipeline {
   agent { 
