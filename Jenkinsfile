@@ -1,8 +1,11 @@
+DOCKER_MAVEN_IMAGE = 'maven:3.9-eclipse-temurin-17'
+DOCKER_MAVEN_ARGS = '-v $HOME/.m2/builds/$BRANCH_NAME:/root/.m2 -u 113:120'
+
 pipeline {
   agent { 
     docker {
-      image "maven:3.9-eclipse-temurin-17" 
-      args '-e JAVA_HOME=/opt/java/openjdk/ -u root'
+      image DOCKER_MAVEN_IMAGE
+      args DOCKER_MAVEN_ARGS
       reuseNode true
     }
   }
